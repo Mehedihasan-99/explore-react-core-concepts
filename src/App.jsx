@@ -5,9 +5,10 @@ function App() {
     <>
       <h1>React</h1>
       <Device name='laptop' price = '18000'></Device>
+      <Device name='phone' price = '9000'></Device>
       <Person></Person>
-      <Student></Student>
-      <Student></Student>
+      <Student grade="3" roll = '1'></Student>
+      <Student roll = '5'></Student>
       <Student></Student>
     </>
   )
@@ -15,8 +16,8 @@ function App() {
 
 
 // use props or propertes 
-function Device(props) {
-  return <h2>This device: {props.name}  price: {props.price} </h2>
+function Device({name, price}) {
+  return <h2>This device: {name}  price: {price} </h2>
 }
 //  style use in same jsx file type of object
 function Person() {
@@ -35,12 +36,12 @@ function Person() {
 // use style another  file 
 // and import this file
 // use className this css / style
-function Student() {
+function Student({grade=1, roll=0 }) {
   return(
     <div className='student'>
       <h3>This is a student.</h3>
-      <p>Name:</p>
-      <p>Age:</p>
+      <p>Class: {grade}</p>
+      <p>Roll: {roll}</p>
     </div>
   )
 }
