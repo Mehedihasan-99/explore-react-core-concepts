@@ -1,9 +1,11 @@
+import Todo from './todo'
 import './App.css'
 
 function App() {
   return (
     <>
       <h1>React</h1>
+      <Todo task='hello' isDone={true}></Todo>
       <Device name='laptop' price = '18000'></Device>
       <Device name='phone' price = '9000'></Device>
       <Person></Person>
